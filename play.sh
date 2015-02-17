@@ -1,2 +1,4 @@
+#!/bin/sh
 
-(echo "(load "\"$1".scm"\"")" && cat && exit) | scheme
+path=${1-lib/ground}
+(echo "(load "\"$path\"")" && cat && exit) | scheme
